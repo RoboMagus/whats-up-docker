@@ -516,6 +516,9 @@ class Docker extends Component {
 
             const tags = await registryProvider.getTags(container.image);
 
+            this.log.debug(`${container.image.name} Tags: ${tags}`);
+            result.tags = tags;     
+
             // Get candidates (based on tag name)
             const tagsCandidates = getTagCandidates(container, tags);
 

@@ -40,6 +40,7 @@ const schema = joi.object({
     }).required(),
     result: joi.object({
         tag: joi.string().min(1),
+        tags: joi.array().items(Joi.string()),
         digest: joi.string(),
         created: joi.string().isoDate(),
         link: joi.string(),

@@ -134,6 +134,7 @@ class Registry extends Component {
             },
         });
         if (responseManifests) {
+            this.log.debug(`responseManifest: ${responseManifests}`);
             if (responseManifests.schemaVersion === 2) {
                 if (responseManifests.mediaType === 'application/vnd.docker.distribution.manifest.list.v2+json') {
                     const manifestFound = responseManifests.manifests
