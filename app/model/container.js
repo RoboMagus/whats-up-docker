@@ -286,11 +286,14 @@ function validate(container) {
  * @returns {*}
  */
 function flatten(container) {
+    const tagsArray = container.result.tags;
+    delete container.result.tags;
     const containerFlatten = flat(container, {
         delimiter: '_',
         transformKey: (key) => snakeCase(key),
     });
     delete containerFlatten.result_changed;
+    containerFlatten.result_tags = tagsArray;
     return containerFlatten;
 }
 

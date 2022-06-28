@@ -50,6 +50,7 @@ function init() {
             'image_name',
             'image_tag_value',
             'image_tag_semver',
+            'image_tags',
             'image_digest_watch',
             'image_digest_value',
             'image_digest_repo',
